@@ -16,7 +16,7 @@ Show any code that is needed to
 2. Process/transform the data (if necessary) into a format suitable for your analysis
 
 ```{r, echo=TRUE}
-setwd("/Users/pacha/Dropbox/R/Peer Assessment 1")
+setwd("/Users/pacha/Documents/Coursera/tareas\ y\ controles/Reproducible\ Research/Course\ Project/")
 source("ipak.R")
 packages <- c("plyr", "lattice", "data.table", "httr", "ggplot2")
 ipak(packages)

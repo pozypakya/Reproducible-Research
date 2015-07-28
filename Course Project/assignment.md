@@ -11,7 +11,7 @@ Show any code that is needed to
 
 
 ```r
-setwd("/Users/pacha/Dropbox/R/RepData_PeerAssessment1")
+setwd("/Users/pacha/Documents/Coursera/tareas\ y\ controles/Reproducible\ Research/Course\ Project/")
 source("ipak.R")
 packages <- c("plyr", "lattice", "data.table", "httr", "ggplot2")
 ipak(packages)
@@ -19,10 +19,35 @@ ipak(packages)
 
 ```
 ## Loading required package: plyr
+```
+
+```
+## Warning: package 'plyr' was built under R version 3.1.3
+```
+
+```
 ## Loading required package: lattice
+```
+
+```
+## Warning: package 'lattice' was built under R version 3.1.3
+```
+
+```
 ## Loading required package: data.table
+```
+
+```
+## Warning: package 'data.table' was built under R version 3.1.3
+```
+
+```
 ## Loading required package: httr
 ## Loading required package: ggplot2
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.1.3
 ```
 
 ```
@@ -78,7 +103,7 @@ okscale <- list(x = list(rot = 45, cex = 1.0, labels = format(pasospordia$date, 
 barchart(date ~ steps, data = pasospordia, main = "steps per day", ylab = "steps", xlab = "date", scales = okscale, horizontal = F)
 ```
 
-![plot of chunk unnamed-chunk-2](./PA1_template_files/figure-html/unnamed-chunk-2.png) 
+![](assignment_files/figure-html/unnamed-chunk-2-1.png) 
 
 ```r
 paste("mean:", mean(pasospordia$steps))
@@ -116,15 +141,15 @@ text(835,200, "max average of steps: (832,206.2)", col = "blue", adj = c(-.1, -.
 segments(0, 206.2, 832, 206.2, col = "blue", lty = "dashed")
 ```
 
-![plot of chunk unnamed-chunk-3](./PA1_template_files/figure-html/unnamed-chunk-3.png) 
+![](assignment_files/figure-html/unnamed-chunk-3-1.png) 
 
 ```r
 seriedetiempo [maximo, ]
 ```
 
 ```
-##     interval steps
-## 104      835 206.2
+##     interval    steps
+## 104      835 206.1698
 ```
 
 ```r
@@ -181,7 +206,7 @@ okscale2 <- list(x = list(rot = 45, cex = 1.0, labels = format(pasospordia2$date
 barchart(date ~ steps, data = pasospordia2, main = "steps per day", ylab = "steps", xlab = "date", scales = okscale2, horizontal = F)
 ```
 
-![plot of chunk unnamed-chunk-4](./PA1_template_files/figure-html/unnamed-chunk-4.png) 
+![](assignment_files/figure-html/unnamed-chunk-4-1.png) 
 
 ```r
 paste("mean:", mean(pasospordia2$steps))
@@ -252,4 +277,4 @@ qplot(interval, steps, data=semana_o_finde, geom=c("line"), xlab="5-min interval
       ylab="steps mean", main="") + facet_wrap(~ tipodia, ncol=1)
 ```
 
-![plot of chunk unnamed-chunk-5](./PA1_template_files/figure-html/unnamed-chunk-5.png) 
+![](assignment_files/figure-html/unnamed-chunk-5-1.png) 
